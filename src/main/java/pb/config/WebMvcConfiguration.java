@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilde
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.fasterxml.jackson.databind.SerializationFeature;
-
 import pb.util.DateTimeUtility;
 
 @Configuration

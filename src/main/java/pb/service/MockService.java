@@ -30,8 +30,8 @@ public class MockService {
     	dimensions.setWeight(new BigDecimal(50));
     	dimensions.setWidth(new BigDecimal(50));
     	task.setDimensions(dimensions);
-    	task.setJobId("");
-    	task.setNote("");
+    	task.setJobId("3gdsa6");
+    	task.setNote("ผู้ส่งของต้องการคนช่วยขน 2 คน");
     	task.setPaymentMethod("credit_card");
     	task.setReceiverLocation("13.699789,100.49151");
     	task.setSenderLocation("13.731808,100.579370");
