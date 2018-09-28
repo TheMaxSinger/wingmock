@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.springframework</groupId>
-	<artifactId>gs-spring-boot-docker</artifactId>
+	<groupId>pb</groupId>
+	<artifactId>wing-mock</artifactId>
 	<version>0.1.0</version>
 
 	<parent>
@@ -15,9 +15,27 @@
 	</parent>
 
 	<properties>
-		<java.version>1.8</java.version>
 		<docker.image.prefix>springio</docker.image.prefix>
-	</properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <rpm.username>appservice</rpm.username>
+        <rpm.groupname>appservice</rpm.groupname>
+        <dependency-check-format>HTML</dependency-check-format>
+        <dependency-check-failBuildOnCVSS>11</dependency-check-failBuildOnCVSS>
+        <dependency-check-failBuildOnAnyVulnerability>false</dependency-check-failBuildOnAnyVulnerability>
+        <swagger2.version>2.7.0</swagger2.version>
+        <jacoco.version>0.7.9</jacoco.version>
+        <cobertura.version>2.1.1</cobertura.version>
+        <spring-cloud.version>Edgware.SR3</spring-cloud.version>
+        <spring-zipkin.version>1.3.3.RELEASE</spring-zipkin.version>
+        <mysql-connector.version>5.1.47</mysql-connector.version>
+        <hibernate.version>5.3.6.Final</hibernate.version>
+        <jackson.version>2.9.7</jackson.version>
+        <camel.version>2.21.1</camel.version>
+        <amazon.s3.version>1.11.17</amazon.s3.version>
+        <h2database.version>1.4.196</h2database.version>
+    </properties>
 
 	<dependencies>
 		<dependency>
@@ -29,9 +47,82 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-core</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-config</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-web</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-annotations</artifactId>
+		    <version>3.5.6-Final</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>6.0.13.Final</version>
+		</dependency>
+		<dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-java8</artifactId>
+            </dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    </dependency>
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-text</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		</dependency>
 	</dependencies>
-
-
+	
 	<build>
 		<plugins>
 			<plugin>
