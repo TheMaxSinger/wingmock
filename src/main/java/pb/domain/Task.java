@@ -23,7 +23,7 @@ public class Task extends DateAttributesForTask {
 		return taskStatus;
 	}
 	
-	public void setTaskType(String taskStatus) {
+	public void setTaskStatus(String taskStatus) {
 		this.taskStatus = taskStatus;
 	}
 	
