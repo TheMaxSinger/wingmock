@@ -16,7 +16,7 @@ import pb.domain.Task;
 import pb.service.MockService;
 
 @RestController
-@RequestMapping(value = "/")
+@RequestMapping(value = "/wm")
 @Api(value = "Wing Mock API", tags = {"Wing Mock API"})
 public class MockServiceController {
 
