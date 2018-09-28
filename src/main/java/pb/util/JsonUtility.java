@@ -23,7 +23,7 @@ public class JsonUtility {
 			.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 	
 	public static String getJsonString(Object objectToConvert) throws JsonProcessingException {
-		return objectMapper.writeValueAsString(objectToConvert);
+		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(objectToConvert);
 	}
 	
 	public static <T> T getObject(String stringToConvert, Class<T> clazz) throws JsonParseException, JsonMappingException, IOException {

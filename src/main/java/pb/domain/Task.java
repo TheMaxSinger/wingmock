@@ -1,8 +1,11 @@
 package pb.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+import pb.util.JsonUtility;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
@@ -97,6 +100,14 @@ public class Task extends DateAttributesForTask {
 	
 	public void setNote(String note) {
 		this.note = note;
+	}
+	
+	public String toString() {
+		try {
+			return JsonUtility.getJsonString(this);
+		} catch (JsonProcessingException e) {
+			throw new IllegalArgumentException(e.getMessage());
+		}
 	}
 
 }
