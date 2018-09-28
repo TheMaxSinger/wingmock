@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilde
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 import pb.util.DateTimeUtility;
 
 @Configuration
@@ -20,6 +22,7 @@ public class WebMvcConfiguration {
         return mapper -> {
             mapper.timeZone(timeZone);
             mapper.dateFormat(new SimpleDateFormat(DateTimeUtility.WING_DATE_FORMAT));
+            mapper.indentOutput(true);
         };
     }
     
