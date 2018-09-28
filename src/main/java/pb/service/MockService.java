@@ -22,7 +22,7 @@ public class MockService {
     	task.setCreateDate(LocalDateTime.now());
     	Customer customer = new Customer();
     	customer.setCustomerId("4gdfg6");
-    	customer.setCustomerName("Mr. Somchai");
+    	customer.setCustomerName(wingId);
     	task.setCustomer(customer);
     	Dimensions dimensions = new Dimensions();
     	dimensions.setHeight(new BigDecimal(50));
