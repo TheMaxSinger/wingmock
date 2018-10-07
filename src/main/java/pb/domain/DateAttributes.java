@@ -20,7 +20,7 @@ import pb.util.LocalDateTimeSerializer;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class DateAttributesForTask { 
+public class DateAttributes { 
 	
 	@ApiModelProperty(value = DateTimeUtility.WING_DATE_FORMAT, required = true , example = "require")
     @DateTimeFormat(pattern = DateTimeUtility.WING_DATE_FORMAT)

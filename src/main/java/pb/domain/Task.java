@@ -9,7 +9,7 @@ import pb.util.JsonUtility;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class Task extends DateAttributesForTask { 
+public class Task extends DateAttributes { 
 	
 	private String taskStatus;
 	private String jobId;

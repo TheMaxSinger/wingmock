@@ -2,15 +2,15 @@ package pb.domain;
 
 public class Response<T> {
 
-    private Status status;
+    private boolean success;
     private T data;
 
-    public Status getStatus() {
-        return status;
+    public boolean getSuccess() {
+        return success;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 
     public T getData() {

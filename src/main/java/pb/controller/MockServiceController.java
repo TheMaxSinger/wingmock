@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import pb.domain.Response;
-import pb.domain.Status;
 import pb.domain.Task;
+import pb.domain.Work;
 import pb.service.MockService;
 
 @RestController
@@ -25,10 +25,19 @@ public class MockServiceController {
     
     @ApiOperation(value = "Get Task For Wingman")
     @GetMapping(path = "/task/{wing_id:.+}")
-    public Response<List<Task>> getDownloadHistoryList(@PathVariable("wing_id") String wingId) {
+    public Response<List<Task>> getTasks(@PathVariable("wing_id") String wingId) {
     	Response<List<Task>> response = new Response<>();
-    	response.setStatus(Status.SUCCESS);
+    	response.setSuccess(true);
     	response.setData(mockService.getTasks(wingId));
+        return response;
+    }
+    
+    @ApiOperation(value = "Get Incoming Work For Wingman")
+    @GetMapping(path = "/incomingWork/{wing_id:.+}")
+    public Response<List<Work>> getWorks(@PathVariable("wing_id") String wingId) {
+    	Response<List<Work>> response = new Response<>();
+    	response.setSuccess(true);
+    	response.setData(mockService.getWorks(wingId));
         return response;
     }
 
