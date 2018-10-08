@@ -14,7 +14,7 @@ class SecurityConfiguation extends WebSecurityConfigurerAdapter {
             "/swagger-ui.html",
             "/v2/api-docs",
             "/webjars/**", 
-            
+            "/actuator",
             "/wm/**"
             
     };
