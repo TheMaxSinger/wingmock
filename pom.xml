@@ -145,6 +145,7 @@
 			<artifactId>simpleclient_pushgateway</artifactId>
 			<version>0.0.26</version>
 		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
